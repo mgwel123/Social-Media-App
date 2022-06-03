@@ -51,13 +51,38 @@
     object-fit: contain;
 }
 
+.postBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postBottomLeft {
+    display: flex;
+    align-items: center;
+}
+
 .likeButton {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    cursor: pointer;
 }
 
 .heartButton {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.likeCounter {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.commentText {
+    font-weight: 600;
+    margin-right: 8px;
+    cursor: pointer;
+    border-bottom: 2px dotted rgb(185, 185, 185);
 }
