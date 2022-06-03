@@ -4,17 +4,18 @@ import { Users } from '../STORE/mockdata';
 import Online from '../online/Online';
 
 export default function Rightbar({profile}) {
+  const Public = process.env.REACT_APP_PUBLIC_FOLDER;
 
   const HomepageRightbar = () => {
     return (
       <>
         <div className="birthdayContainer">
-          <img className="birthdayPic" src="/assets/birthday/pinkcake.png" alt=""/>
+          <img className="birthdayPic" src={`${Public}birthday/pinkcake.png`} alt=""/>
           <span className="birthdayText">
             <b>Bruce Banner</b> and <b>2 others</b> have birthdays today
           </span>
         </div>
-        <img className="adPlacement" src="/assets/ads/mockad.jpg" alt="See your advertisement here!"/>
+        <img className="adPlacement" src={`${Public}ads/mockad.jpg`} alt="See your advertisement here!"/>
         <h3 className="onlineTitle">Online Now</h3>
         <ul className="onlineFriends">
           {Users.map((u)=>(
@@ -47,19 +48,19 @@ export default function Rightbar({profile}) {
         <h3 className="rightbarTitle">Friends</h3>
         <div className="rightbarFriends">
           <div className="rightbarFriend">
-            <img src="assets/person/2.jpg" alt="" className="rightbarFriendPic" />
+            <img src={`${Public}person/2.jpg`} alt="" className="rightbarFriendPic" />
             <span className="rightbarFriendName">Bruce Banner</span>
           </div>
           <div className="rightbarFriend">
-            <img src="assets/person/3.jpg" alt="" className="rightbarFriendPic" />
+            <img src={`${Public}person/3.jpg`} alt="" className="rightbarFriendPic" />
             <span className="rightbarFriendName">Bruce Banner</span>
           </div>
           <div className="rightbarFriend">
-            <img src="assets/person/4.jpg" alt="" className="rightbarFriendPic" />
+            <img src={`${Public}person/4.jpg`} alt="" className="rightbarFriendPic" />
             <span className="rightbarFriendName">Bruce Banner</span>
           </div>
           <div className="rightbarFriend">
-            <img src="assets/person/5.jpg" alt="" className="rightbarFriendPic" />
+            <img src={`${Public}person/5.jpg`} alt="" className="rightbarFriendPic" />
             <span className="rightbarFriendName">Bruce Banner</span>
           </div>
         </div>
@@ -69,7 +70,7 @@ export default function Rightbar({profile}) {
   return (
     <div className="rightbar">
         <div className="rightWrapper">
-          <ProfileRightbar />
+          {profile ? <ProfileRightbar /> : <HomepageRightbar />}
         </div>
     </div>
   )

@@ -2,13 +2,16 @@ import React from 'react';
 import './topbar.css';
 import { Search, Person, Chat, CircleNotifications } from '@mui/icons-material';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 
 export default function Topbar() {
     return (
         <Navbar className="container">
             <Navbar.Brand className="topbarLogo">
-                <span className="logo">Social Social</span>
+                <Link to="/" style={{textDecoration:"none"}}>
+                    <span className="logo">SuperSocial</span>
+                </Link>
             </Navbar.Brand>
             <div className="topbarSearch">
                 <div className="searchbar">

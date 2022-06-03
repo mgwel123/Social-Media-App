@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css';
+import './register.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -15,10 +15,12 @@ export default function Login() {
             <div className="loginLRight">
                 <Form>
                     <Form.Control placeholder="Email" className="loginInput"/>
+                    <Form.Control placeholder="Confirm Email" className="loginInput"/>
                     <Form.Control placeholder="Password" className="loginInput"/>
-                    <Button variant="primary" className="loginButton">Log In</Button>
-                    <span className="loginForgotPassword">Forgot your Password?</span>
-                    <Button className="registerButton">Create an Account</Button>
+                    <Form.Control placeholder="Confirm Password" className="loginInput"/>
+                    <Button variant="primary" className="registerButton">Create an Account</Button>
+                    <br/>
+                    <Button className="loginButton">Back to Log In</Button>
                 </Form>  
             </div>
         </div>

@@ -1,32 +1,38 @@
 export const Users = [
     {
         id: 1,
-        profilePicture: "assets/person/1.jpeg",
+        profilePicture: "person/1.jpeg",
         username: "Thor Odinson",
+        email: "thor@gmail.com",
+        password: "pointbreak",
     },
     {
         id: 2,
-        profilePicture: "assets/person/2.jpg",
+        profilePicture: "person/2.jpg",
         username: "Bruce Banner",
+        email: "bbanner@gmail.com",
+        password: "strongestavenger",
     },
     {
         id: 3,
-        profilePicture: "assets/person/3.jpg",
+        profilePicture: "person/3.jpg",
         username: "Loki",
+        email: "loki@hotmail.com",
+        password: "thorsucks",
     },
     {
         id: 4,
-        profilePicture: "assets/person/4.jpg",
+        profilePicture: "person/4.jpg",
         username: "Rocket Raccoon",
     },
     {
         id: 5,
-        profilePicture: "assets/person/5.jpg",
+        profilePicture: "person/5.jpg",
         username: "Mantis",
     },
     {
         id: 6,
-        profilePicture: "assets/person/6.jpg",
+        profilePicture: "person/6.jpg",
         username: "Scott Lang",
     }
 ]
@@ -35,7 +41,7 @@ export const Posts = [
     {
         id:1,
         desc: "More Beer!",
-        photo: "assets/posts/thor1.jpg",
+        photo: "posts/thor1.jpg",
         date: "14 mins ago",
         userId: 1,
         like: 14,
@@ -43,7 +49,7 @@ export const Posts = [
     },
     {
         id: 2,
-        photo: "assets/posts/ant-man1.jpg",
+        photo: "posts/ant-man1.jpg",
         date: "36 mins ago",
         userId: 6,
         like: 3,
