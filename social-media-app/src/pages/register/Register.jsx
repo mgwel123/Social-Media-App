@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
-export default function Login() {
+export default function Register() {
   return (
     <div className="login">
         <div className="loginWrapper">

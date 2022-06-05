@@ -21,8 +21,8 @@ export default function Topbar() {
             </div>
             <div className="topbarLinks">
                 <div className="links">
-                    <span class="topbarLink">Homepage</span>
-                    <span class="topbarLink">Timeline</span>
+                    <span className="topbarLink">Homepage</span>
+                    <span className="topbarLink">Timeline</span>
                 </div>
                 <div className="icons">
                     <div className="iconItem">

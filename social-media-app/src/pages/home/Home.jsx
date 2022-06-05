@@ -10,7 +10,7 @@ export default function Home() {
         <>
             <Topbar />
             <br/>
-            <div class="pageContainer">
+            <div className="pageContainer">
                 <Sidebar />
                 <Feed />
                 <Rightbar />

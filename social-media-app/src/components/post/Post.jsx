@@ -1,14 +1,25 @@
 import React from 'react';
 import './post.css';
-import { MoreVert } from '@mui/icons-material'
-import { Users } from '../STORE/mockdata'
-import { useState } from 'react';
+import { MoreVert } from '@mui/icons-material';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { format } from 'timeago.js';
 
 
 export default function Post({post}) {
-    const [like, setLike] = useState(post.like);
+    const [like, setLike] = useState(post.likes.length);
     const [isLiked, setIsLiked] = useState(false);
+    const [user, setUser] = useState({});
     const Public = process.env.REACT_APP_PUBLIC_FOLDER;
+
+
+    useEffect(()=> {
+        const fetchUser = async () => {
+          const res = await axios.get(`https://629a9968cf163ceb8d0c4820.mockapi.io/users/${post.userId}`);
+          setUser(res.data)
+        };
+        fetchUser();
+    },[post.userId])
 
     const likeHandler = () => {
         setLike(isLiked ? like-1 : like+1)
@@ -20,9 +31,9 @@ export default function Post({post}) {
         <div className="postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
-                    <img className="postUserPic" src={Users.filter(u=>u.id === post.userId)[0].profilePicture} alt=""/>
-                    <span className="postUsername">{Users.filter(u=>u.id === post.userId)[0].username}</span>
-                    <span className="postDate">{post.date}</span>
+                    <img className="postUserPic" src={post.profilePicture || Public+"person/blank.jpg"} alt=""/>
+                    <span className="postUsername">{post.username}</span>
+                    <span className="postDate">{format(post.createdAt)}</span>
                 </div>
                 <div className="postTopRight">
                     <MoreVert />

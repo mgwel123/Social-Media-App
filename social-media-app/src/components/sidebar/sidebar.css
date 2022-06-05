@@ -38,7 +38,9 @@
 
 .icon {
     margin-right: 16px;
+    cursor: pointer;
 }
+
 
 .sidebarButton {
     width: 150px;
